@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fireball Energy - App Web</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #111;
+      color: white;
+    }
+
+    header {
+      background: linear-gradient(90deg, #ff2a00, #ff8c00);
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 36px;
+      letter-spacing: 2px;
+    }
+
+    header p {
+      font-size: 18px;
+      margin-top: 8px;
+    }
+
+    nav {
+      background: #000;
+      padding: 12px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 12px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #ff8c00;
+    }
+
+    section {
+      padding: 45px 25px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 70px 25px;
+      background: radial-gradient(circle, #3a0d00, #111);
+    }
+
+    .hero h2 {
+      font-size: 42px;
+      color: #ff8c00;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      font-size: 20px;
+      margin-bottom: 25px;
+    }
+
+    .btn {
+      background: #ff2a00;
+      color: white;
+      padding: 14px 24px;
+      border: none;
+      border-radius: 30px;
+      font-size: 16px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .btn:hover {
+      background: #ff8c00;
+    }
+
+    h2 {
+      color: #ff8c00;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 22px;
+      margin-top: 25px;
+    }
+
+    .card {
+      background: #1d1d1d;
+      border: 1px solid #ff2a00;
+      border-radius: 18px;
+      padding: 22px;
+      text-align: center;
+      box-shadow: 0 0 12px rgba(255, 70, 0, 0.25);
+    }
+
+    .product-img {
+      width: 120px;
+      height: 180px;
+      border-radius: 15px;
+      margin: 0 auto 15px;
+      background: linear-gradient(#ff2a00, #111);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 42px;
+    }
+
+    .price {
+      color: #ff8c00;
+      font-size: 22px;
+      font-weight: bold;
+      margin: 10px 0;
+    }
+
+    .about-box {
+      background: #1d1d1d;
+      border-radius: 18px;
+      padding: 25px;
+      line-height: 1.6;
+    }
+
+    .promo {
+      background: linear-gradient(120deg, #ff2a00, #ff8c00);
+      border-radius: 18px;
+      padding: 25px;
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .cart {
+      background: #1d1d1d;
+      border-radius: 18px;
+      padding: 25px;
+      max-width: 600px;
+      margin: auto;
+    }
+
+    .cart-item {
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px solid #333;
+      padding: 12px 0;
+    }
+
+    form {
+      max-width: 600px;
+      margin: auto;
+      background: #1d1d1d;
+      padding: 25px;
+      border-radius: 18px;
+    }
+
+    input, textarea {
+      width: 100%;
+      margin-bottom: 15px;
+      padding: 13px;
+      border: none;
+      border-radius: 8px;
+    }
+
+    footer {
+      background: #000;
+      text-align: center;
+      padding: 20px;
+      color: #aaa;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>FIREBALL ENERGY</h1>
+    <p>Energía intensa para personas imparables</p>
+  </header>
+
+  <nav>
+    <a href="#inicio">Inicio</a>
+    <a href="#nosotros">Nosotros</a>
+    <a href="#productos">Productos</a>
+    <a href="#promos">Promos</a>
+    <a href="#carrito">Carrito</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+
+  <div class="hero" id="inicio">
+    <h2>Activa tu poder con Fireball</h2>
+    <p>La bebida energética creada para jóvenes activos, estudiantes y personas que buscan más energía durante el día.</p>
+    <button class="btn" onclick="location.href='#productos'">Comprar ahora</button>
+  </div>
+
+  <section id="nosotros">
+    <h2>Sobre Nosotros</h2>
+    <div class="about-box">
+      <p><strong>Fireball Energy</strong> es una marca de bebidas energéticas desarrollada dentro del simulador Energy&Co. Nuestra propuesta de valor se basa en ofrecer una bebida moderna, intensa y accesible, pensada para consumidores jóvenes que buscan rendimiento, sabor y estilo.</p>
+      <br>
+      <p><strong>Misión:</strong> brindar energía de calidad a nuestros clientes a través de productos innovadores y atractivos.</p>
+      <p><strong>Visión:</strong> posicionarnos como una marca reconocida en el mercado de bebidas energéticas.</p>
+      <p><strong>Valores:</strong> innovación, calidad, energía, compromiso y cercanía con el cliente.</p>
+    </div>
+  </section>
+
+  <section id="productos">
+    <h2>Nuestros Productos</h2>
+    <div class="cards">
+      <div class="card">
+        <div class="product-img">🔥</div>
+        <h3>Fireball Original</h3>
+        <p>Sabor clásico con energía intensa para comenzar el día con fuerza.</p>
+        <p class="price">$35 MXN</p>
+        <button class="btn" onclick="agregar('Fireball Original', 35)">Agregar al carrito</button>
+      </div>
+
+      <div class="card">
+        <div class="product-img">⚡</div>
+        <h3>Fireball Zero</h3>
+        <p>Opción sin azúcar, ideal para quienes buscan energía ligera y moderna.</p>
+        <p class="price">$38 MXN</p>
+        <button class="btn" onclick="agregar('Fireball Zero', 38)">Agregar al carrito</button>
+      </div>
+
+      <div class="card">
+        <div class="product-img">💥</div>
+        <h3>Fireball Extreme</h3>
+        <p>Mayor intensidad para estudiantes, gamers y personas con días exigentes.</p>
+        <p class="price">$42 MXN</p>
+        <button class="btn" onclick="agregar('Fireball Extreme', 42)">Agregar al carrito</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="promos">
+    <h2>Promociones</h2>
+    <div class="promo">
+      <h3>Pack Universitario</h3>
+      <p>Compra 3 bebidas Fireball y obtén 10% de descuento.</p>
+    </div>
+    <div class="promo">
+      <h3>Cliente Frecuente</h3>
+      <p>Acumula puntos en cada compra y canjéalos por productos gratis.</p>
+    </div>
+  </section>
+
+  <section id="carrito">
+    <h2>Carrito de Compras</h2>
+    <div class="cart">
+      <div id="lista"></div>
+      <br>
+      <h3>Total: $<span id="total">0</span> MXN</h3>
+      <br>
+      <button class="btn" onclick="finalizar()">Finalizar compra</button>
+    </div>
+  </section>
+
+  <section id="contacto">
+    <h2>Contacto</h2>
+    <form>
+      <input type="text" placeholder="Nombre completo">
+      <input type="email" placeholder="Correo electrónico">
+      <textarea rows="5" placeholder="Escribe tu mensaje"></textarea>
+      <button type="button" class="btn">Enviar mensaje</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>© 2026 Fireball Energy | Simulador Energy&Co</p>
+    <p>Instagram: @fireballenergy | Correo: contacto@fireballenergy.com</p>
+  </footer>
+
+  <script>
+    let total = 0;
+    let lista = document.getElementById("lista");
+    let totalTexto = document.getElementById("total");
+
+    function agregar(producto, precio) {
+      total += precio;
+      let item = document.createElement("div");
+      item.className = "cart-item";
+      item.innerHTML = "<span>" + producto + "</span><span>$" + precio + " MXN</span>";
+      lista.appendChild(item);
+      totalTexto.textContent = total;
+    }
+
+    function finalizar() {
+      if (total === 0) {
+        alert("Tu carrito está vacío.");
+      } else {
+        alert("¡Gracias por tu compra! Total a pagar: $" + total + " MXN");
+      }
+    }
+  </script>
+
+</body>
+</html>
